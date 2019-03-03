@@ -1,0 +1,148 @@
+body{
+	font-family: Arial;
+	padding: 0;
+	margin:0;
+}
+
+.menu{
+	width: 100%;
+	height: 50px;
+	background-color: #9eccd3;
+}
+
+ul{
+	list-style: none;
+	margin-top: 0;
+	text-align: center;
+}
+
+li{
+	display: inline-block;
+	margin-top: 17px;
+	margin-right: 100px;
+	color: white;
+}
+
+
+.image{
+	width: 100%;
+	height: 600px;
+	background: url("images/waterfall.jpg")no-repeat center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	margin: 0;
+	position: relative;
+}
+
+.search{
+	position: absolute;
+	color: white;
+	text-shadow: 2px 2px #000000;
+	padding-left: 380px;
+	padding-top: 200px;
+	text-align: center;
+}
+
+
+.about{
+	display: inline-block;
+	background-color: #95B9C7;
+	width: 100%;
+	height: 510px;
+}
+
+.aboutphoto{
+	display: inline-block;
+	}
+
+.aboutphoto img{
+	height: 400px;
+	width: 450px;
+	padding-left: 125px;
+}
+
+.one1{
+	margin-left: 100px;
+}
+
+.two2{
+	width: 37%;
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 100px;
+}
+
+.teamheader{
+	margin-left: 100px;
+}
+
+ .team {
+ 	display: inline-block;
+	background-color: #98AFC7;
+	width: 100%;
+	height: 510px;
+}
+
+.img {
+	display: inline-block;
+	width: 530px;
+	height: 400px;
+	margin: auto;
+
+}
+
+.txt {
+	display: inline-block;
+	width: 37%;
+	vertical-align: top;
+	padding-left: 65px;
+}
+
+.currentproject{
+	display: inline-block;
+	background-color: #C6DEFF;
+	width: 100%;
+	height: 470px;
+}
+
+.textone{
+	margin-left: 100px;
+}
+
+.texttwo{
+	width: 37%;
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 100px;
+}
+
+.video{
+	display: inline-block;
+	width: 530px;
+	height: 400px;
+	margin: auto;
+}
+
+.donate {
+	background-color: #EBF4FA;
+	height: 200px;
+	display: inline-block;
+	}
+.donate1 {
+	margin-left: 100px;
+	}
+.donated {
+	margin-left: 100px;
+}
+.donation {
+	margin-top: 20px;
+	margin-left: 100px;
+}
+
+.end{
+	height: 75px;
+	width: 100%;
+	background-color: black;
+}
