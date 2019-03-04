@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<link rel='stylesheet' href='styles/styles.css' type='text/css' />
+	
+</head>
+<body>
+	<div class="menu">
+		<ul>
+			<li>home</li>
+			<li>my list</li>
+			<li>top rated</li>
+			<li>write a review</li>
+			<li>log in</li>
+		</ul>
+	</div>
+	<div class="logincenter">
+	 	<div class="login">
+		 <form action="" onsubmit="return (validateInfo())">
+		    <label>Username: </label> 
+		    <input type="text" id="username" autofocus required />
+		    <div id="user-msg" class="feedback"></div>  <br/>
+		    <label>Password: </label> 
+		    <input type="password" id="pwd" required />
+		    <div id="pwd-msg" class="feedback"></div>  <br/>
+		    <input type="submit" value="Sign in" />  
+		  </form>
+		  <a href="newUser.html">
+		  	<p>Forgot Password</p>
+		  </a>
+		</div>
+	</div>
+
+
+	<footer class="primary-footer container">
+      <small class="copyright">&copy; Catherine Chang and Daniel Perkins | 2019 | All Rights Reserved</small>
+      <nav class="nav">
+      </nav>
+    </footer>
+
+   <!-- use input type="submit" with the required attribute -->
+<script>
+   var user = document.getElementById("username");    
+   function checkUsername(minLength) {
+      var msg = document.getElementById("user-msg");      
+      if (user.value.length < minLength && user.value.length > 0)
+         msg.textContent = "Username must be " + minLength + " characters or more";
+      else
+         msg.textContent = "";
+   }
+   user.addEventListener('blur', function() { 
+         checkUsername(8); 
+      }, false);
+  </script>
+</body>
