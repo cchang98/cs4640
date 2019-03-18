@@ -1,0 +1,76 @@
+body{
+	font-family: Arial;
+  background-repeat: no-repeat;
+  background-size: 100% 600px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
+
+.menu{
+	width: 100%;
+	height: 50px;
+	background-color: #B7D5F9;
+}
+
+ul{
+	list-style: none;
+	margin-top: 0;
+	text-align: center;
+}
+
+li{
+	display: inline-block;
+	margin-top: 17px;
+	margin-right: 100px;
+	color: white;
+}
+
+
+/* Style the links inside the navigation bar */
+.menu a {
+  color: #ffffff;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.menu a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.menu a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+.login{
+  text-align: center;  
+  margin: auto;
+  border: 3px solid black;
+  padding: 10px;
+  display: inline-block;
+
+}
+
+.logincenter {
+	padding: 30px;
+	text-align: center;
+}
+.primary-footer {
+   position:absolute;
+   bottom:0;
+   width:100%;
+   height:30px;   /* Height of the footer */
+   background:#89A7A8;
+}
+.image {
+background-image: url(images/login_image.jpg);
+background-repeat: no-repeat;
+background-size: 100% 100%;
+}

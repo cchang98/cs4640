@@ -2,35 +2,40 @@
 <html>
 <head>
 	<meta charset="UTF-8" />
-	<link rel='stylesheet' href='styles/styles.css' type='text/css' />
+	<link rel='stylesheet' href='styles/loginstyles.css' type='text/css' />
 	
 </head>
-<body>
-	<div class="menu">
-		<ul>
-			<li>home</li>
-			<li>my list</li>
-			<li>top rated</li>
-			<li>write a review</li>
-			<li>log in</li>
-		</ul>
-	</div>
-	<div class="logincenter">
-	 	<div class="login">
-		 <form action="" onsubmit="return (validateInfo())">
-		    <label>Username: </label> 
-		    <input type="text" id="username" autofocus required />
-		    <div id="user-msg" class="feedback"></div>  <br/>
-		    <label>Password: </label> 
-		    <input type="password" id="pwd" required />
-		    <div id="pwd-msg" class="feedback"></div>  <br/>
-		    <input type="submit" value="Sign in" />  
-		  </form>
-		  <a href="newUser.html">
-		  	<p>Forgot Password</p>
-		  </a>
+<body background = "images/login_image.jpg">
+	
+
+		<div class="menu">
+			<ul>
+				<li>home</li>
+				<li>my list</li>
+				<li>top rated</li>
+				<li>write a review</li>
+				<li>log in</li>
+			</ul>
 		</div>
-	</div>
+
+		<div class="image">
+			<div class="logincenter">
+			 	<div class="login">
+				 <form action="" onsubmit="return (validateInfo())">
+				    <label>Username: </label> 
+				    <input type="text" id="username" autofocus required />
+				    <div id="user-msg" class="feedback"></div>  <br/>
+				    <label>Password: </label> 
+				    <input type="password" id="pwd" required />
+				    <div id="pwd-msg" class="feedback"></div>  <br/>
+				    <input type="submit" value="Sign in" />  
+				  </form>
+				  <a href="newUser.html">
+				  	<p>Forgot Password</p>
+				  </a>
+				</div>
+			</div>
+		</div>
 
 
 	<footer class="primary-footer container">
