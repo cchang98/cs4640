@@ -6,9 +6,11 @@ body{
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-
 }
 
+html {
+  overflow-y: scroll;
+}
 .menu{
 	width: 100%;
 	height: 50px;
@@ -59,9 +61,10 @@ li{
 }
 
 .logincenter {
-	padding: 30px;
-	text-align: center;
+  padding: 30px;
+  text-align: center;
 }
+
 .primary-footer {
    position:absolute;
    bottom:0;
@@ -70,7 +73,7 @@ li{
    background:#89A7A8;
 }
 .image {
-background-image: url(images/login_image.jpg);
-background-repeat: no-repeat;
-background-size: 100% 100%;
+  background-image: url(images/login_image.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
