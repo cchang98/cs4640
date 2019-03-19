@@ -1,16 +1,5 @@
-body{
-	font-family: Arial;
-  background-repeat: no-repeat;
-  background-size: 100% 600px;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
-html {
-  overflow-y: scroll;
-}
 .menu{
 	width: 100%;
 	height: 50px;
@@ -28,6 +17,8 @@ li{
 	margin-top: 17px;
 	margin-right: 100px;
 	color: white;
+  font: 300 16px/22px "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: bolder;
 }
 
 
@@ -61,8 +52,8 @@ li{
 }
 
 .logincenter {
-  padding: 30px;
-  text-align: center;
+	padding: 30px;
+	text-align: center;
 }
 
 .primary-footer {
@@ -72,8 +63,19 @@ li{
    height:30px;   /* Height of the footer */
    background:#89A7A8;
 }
-.image {
-  background-image: url(images/login_image.jpg);
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
+
+.image{
+  width: 100%;
+  height: 600px;
+  background: url("images/login_image.jpg")no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin: 0;
+  position: relative;
+}
+
+a[href="newUser.html"] {
+  font-size: 12px;
 }

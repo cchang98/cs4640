@@ -2,28 +2,26 @@
 <html>
 <head>
 	<meta charset="UTF-8" />
-	<link rel='stylesheet' href='styles/loginstyles.css' type='text/css' />
+	<link rel='stylesheet' href='loginstyles.css' type='text/css' />
 	
 </head>
-<body background = "images/login_image.jpg">
-	
+<body>
+	<div class="menu">
+		<ul>
+			<li><a href="./index.html">home</a></li>
+		<li><a href="list">my list</a></li>
+		<li><a href="./tophikes.html">top rated</a></li>
+		<li><a href="#review">write a review</a></li>
+		<li><a href="./login.html">login</a></li>
+		</ul>
+	</div>
 
-		<div class="menu">
-			<ul>
-				<li>home</li>
-				<li>my list</li>
-				<li>top rated</li>
-				<li>write a review</li>
-				<li>log in</li>
-			</ul>
-		</div>
-
-		<div class="image">
+	<div class="image">
 			<div class="logincenter">
 			 	<div class="login">
 				 <form name = "login" action="">
 				    <label>Email: </label> 
-				    <input type="text" name = "EMail" id="email" autofocus required />
+				    <input type="text" name = "Email" id="email" autofocus required />
 				    <div id="email-msg" class="feedback"></div>  <br/>
 				    <label>Password: </label> 
 				    <input type="password" name = "Password" id="pwd" required />
@@ -47,9 +45,8 @@
    <!-- use input type="submit" with the required attribute -->
 <script>
 	function validateEmail() {
-         var emailID = document.login.EMail.value;
+         var emailID = document.login.Email.value;
          var msg = document.getElementById("email-msg")
-
          atpos = emailID.indexOf("@");
          dotpos = emailID.lastIndexOf(".");
          
@@ -64,8 +61,6 @@
 	function checkPassword(len) {
 	  var numbers = /[0-9]/g;
 	  var symbols = /[!@#$%&*?]/g
-
-
 	  var msg = document.getElementById("pwd-msg"); 
       if (passwd.value.length < len && passwd.value.length > 0)
         msg.textContent = "Password must be longer than " + len + " characters";
@@ -76,15 +71,9 @@
       else
          msg.textContent = "";
    }
-
    	var passwd = document.getElementById("pwd");  
    	var e_mail = document.getElementById("email");
    	passwd.addEventListener('blur', function() {checkPassword(8);}, true);
    	e_mail.addEventListener('blur', function() {validateEmail();}, true);
-
-
-
-
-
   </script>
 </body>
