@@ -1,6 +1,9 @@
+/*Cathy Chang, Danny Perkins
+cc5ar, dgp3sy*/
+
 window.onscroll = function() {scrollFunction()};
 
-function scrollFunction() => {
+function scrollFunction() {
   if (document.body.scrollTop > 5 || document.documentElement.scrollTop > 20) {
     document.getElementById("btn").style.display = "block";
   } else {
