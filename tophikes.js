@@ -1,6 +1,6 @@
 window.onscroll = function() {scrollFunction()};
 
-function scrollFunction() {
+function scrollFunction() => {
   if (document.body.scrollTop > 5 || document.documentElement.scrollTop > 20) {
     document.getElementById("btn").style.display = "block";
   } else {
@@ -47,4 +47,3 @@ function init(){
   var kbutton = document.getElementById('knob-button');
   kbutton.addEventListener('click', incrementKnob, true);
 };
-
