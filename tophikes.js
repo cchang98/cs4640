@@ -22,16 +22,18 @@ document.addEventListener('DOMContentLoaded', init, false);
 function init(){
   function incrementRag () {
     var rcount = document.getElementById("rag-count");
-    var newrCount = parseInt(rcount.textContent) + 1;
-    rcount.textContent = newrCount;
+    var intRCount = parseInt(rcount.textContent);
+    var inc = integer => integer + 1
+    rcount.textContent = inc(intRCount);
     document.getElementById("rag-button").disabled = true;
 
   }
 
   function incrementCrab () {
     var ccount = document.getElementById("crab-count");
-    var newcCount = parseInt(ccount.textContent) + 1;
-    ccount.textContent = newcCount;
+    var inc = function(integer) {return integer + 1;}
+    var intcCount = parseInt(ccount.textContent);
+    ccount.textContent = inc(intcCount);
     document.getElementById("crab-button").disabled = true;
 
   }
