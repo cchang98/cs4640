@@ -22,7 +22,7 @@ cc5ar, dgp3sy-->
 	<div class="image">
 			<div class="logincenter">
 			 	<div class="login">
-				 <form name = "login" action="">
+				 <form name = "login" action="cookie-login.php">
 				    <label>Email: </label> 
 				    <input type="text" name = "Email" id="email" autofocus required />
 				    <div id="email-msg" class="feedback"></div>  <br/>
@@ -31,8 +31,8 @@ cc5ar, dgp3sy-->
 				    <div id="pwd-msg" class="feedback"></div>  <br/>
 				    <input type="submit" value="Sign in" />  
 				  </form>
-				  <a href="newUser.html">
-				  	<p>Forgot Password</p>
+				  <a href="newUser.php">
+				  	<p>Create an Account</p>
 				  </a>
 				</div>
 			</div>
@@ -79,4 +79,5 @@ cc5ar, dgp3sy-->
    	passwd.addEventListener('blur', function() {checkPassword(8);}, true);
    	e_mail.addEventListener('blur', function() {validateEmail();}, true);
   </script>
+
 </body>
