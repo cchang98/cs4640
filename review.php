@@ -8,7 +8,7 @@ cc5ar, dgp3sy-->
 	<link rel='stylesheet' href='loginstyles.css' type='text/css' />
 	
 </head>
-<body background = "login_image.jpg">
+<body background = "review_image.jpg">
 	<div class="menu">
 		<ul>
 			<li><a href="./index.html">home</a></li>
@@ -19,42 +19,41 @@ cc5ar, dgp3sy-->
 		</ul>
 	</div>
 
-	<div class="image">
+	<div class="image-review">
 			<div class="logincenter">
 			 	<div class="login">
-				 <form name = "login" action="login-database.php" method="POST">
-				 	<label>Username: </label> 
+				 <form name = "login" action="review-database.php" method="GET">
+
+				 	<label>Name of Hike: </label> 
 				    <input type="text" name = "Name" id="name" autofocus required />
 				    <div id="name-msg" class="feedback"></div>  <br/>
 
-				    <label>Email: </label> 
-				    <input type="text" name = "Email" id="email" autofocus required />
-				    <div id="email-msg" class="feedback"></div>  <br/>
+				    <label>Location: </label> 
+				    <input type="text" name = "Location" id="location" autofocus required />
+				    <div id="location-msg" class="feedback"></div>  <br/>
 
-				    <label>Password: </label> 
-				    <input type="password" name = "Password" id="pwd" required />
-				    <div id="pwd-msg" class="feedback"></div>  <br/>
-				    <input type="submit" value="Create Account" name="action" />  
+				    <label>Distance: </label>
+				    <input type="text" name = "Distance" id="dist" autofocus required />
+				    <div id="dist-msg" class="feedback"></div> <br/>
+
+				    <label>Review: </label> <br/>
+				    <textarea rows="8" cols="50" name="Review" id='rev' form="login">Enter review here...</textarea>
+				    <div id="rev-msg" class="feedback"></div>  <br/>
+
+				    <input type="submit" value="Submit Review" />  
 
 				  </form>
 				
 				</div>
 			</div>
 		</div>
+<?php
 
+?>
 
 	<footer class="primary-footer container">
       <small class="copyright">&copy; Catherine Chang and Daniel Perkins | 2019 | All Rights Reserved</small>
       <nav class="nav">
       </nav>
     </footer>
-<?php
-
-require('login-database.php');
-
-
-?>        
-
-
-
 </body>
