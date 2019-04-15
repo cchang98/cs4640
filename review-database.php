@@ -29,24 +29,25 @@ try
 
   if (($_SERVER['REQUEST_METHOD'] == 'GET') && (!empty($_GET))) {
     if (isset($_GET['Name']))
-	     $hike = $_GET['Name'];
+	    $hike = $_GET['Name'];
 
     if (isset($_GET['Location']))
-	     $loc = $_GET['Location'];
+	    $loc = $_GET['Location'];
 
     if (isset($_GET['Distance']))
-	     $dist = $_GET['Distance'];
+	    $dist = $_GET['Distance'];
 
     if (isset($_GET['Review']))
-       $rev = $_GET['Review'];
+      $rev = htmlspecialchars($_GET['Review']);
+    echo(htmlspecialchars($_GET['Review']));
 
     //$user = who is entering the review? - use a session?
      session_start();
      $user = $_SESSION['email'];
 
+
       // Add item to database here
-    $sql = "INSERT INTO review (Username, Hike_Name, Location, Distance, Review)
-      VALUES ('$user', $hike', '$loc', '$dist', '$rev')";
+    $sql = "INSERT INTO review (Username, Hike_Name, Location, Distance, Review) VALUES ('$user', '$hike', '$loc', '$dist', '$rev')";
 
     if ($conn->query($sql) == TRUE) {
 
@@ -58,7 +59,7 @@ try
     }
 
 
-    echo "New record created successfully";
+    header("Location: index.html");
 
   }
 	

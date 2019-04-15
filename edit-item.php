@@ -1,5 +1,22 @@
-<!--Cathy Chang, Danny Perkins
-cc5ar, dgp3sy-->
+<? php
+	include_once('list.php');
+
+	if(isset($_GET['edit'])) {
+		$id = $_GET['edit'];
+		$res = mysql_query("SELECT" * FROM review);
+		$row = mysql_fetch_array($res);
+	}
+
+	if(isset($_GET['newReview'])) {
+		$newReview = $_GET['newReview'];
+		$id = $_GET['Name'];
+
+		$sql = "UPDATE review SET Review=$newReview WHERE Hike_Name=$id";
+		$res = mysql_query($sql) or die("Error: could not update");
+	}
+	header("Location: index.html");
+
+?>
 
 <!DOCTYPE html>
 <html>
@@ -22,25 +39,18 @@ cc5ar, dgp3sy-->
 	<div class="image-review">
 			<div class="logincenter">
 			 	<div class="login">
-				 <form name = "login" action="review-database.php" method="GET">
+				 <form name = "login" action="edit-item.php" method="GET">
 
 				 	<label>Name of Hike: </label> 
-				    <input type="text" name = "Name" id="name" autofocus required />
+				    <input type="text" name = "Name" id="Name" autofocus required />
 				    <div id="name-msg" class="feedback"></div>  <br/>
 
-				    <label>Location: </label> 
-				    <input type="text" name = "Location" id="location" autofocus required />
-				    <div id="location-msg" class="feedback"></div>  <br/>
-
-				    <label>Distance: </label>
-				    <input type="text" name = "Distance" id="dist" autofocus required />
-				    <div id="dist-msg" class="feedback"></div> <br/>
 
 				    <label>Review: </label> <br/>
-				    <textarea rows="8" cols="50" name="Review" id='Review'>Enter review here...</textarea>
+				    <textarea rows="8" cols="50" name="newReview" id='newReview'>Edit your review here...</textarea>
 				    <div id="rev-msg" class="feedback"></div>  <br/>
 
-				    <input type="submit" value="Submit Review" />  
+				    <input type="submit" value="Edit Review" />  
 
 				  </form>
 				

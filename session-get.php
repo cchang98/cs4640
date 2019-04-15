@@ -26,9 +26,9 @@ else
 	<div class="menu">
 	<ul>
 		<li><a href="index.html">home</a></li>
-		<li><a href="list">my list</a></li>
+		<li><a href="list.php">my list</a></li>
 		<li><a href="tophikes.html">top rated</a></li>
-		<li><a href="#review">write a review</a></li>
+		<li><a href="review.php">write a review</a></li>
 		<li><a href="login.html">login</a></li>
 	</ul>
 	</div>
