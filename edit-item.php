@@ -1,21 +1,33 @@
-<? php
-	include_once('list.php');
+<!--Cathy Chang, Danny Perkins
+cc5ar, dgp3sy-->
 
+<?php
+$hostname = 'localhost:3306';
+$dbname = 'cc5ar';
+$username = 'cc5ar';
+$password = 'virginia123';
+$dsn = "mysql:host=$hostname;dbname=$dbname";
+$conn = new mysqli($hostname, $username, $password, $dbname);
+	//include_once('list.php');
 	if(isset($_GET['edit'])) {
 		$id = $_GET['edit'];
-		$res = mysql_query("SELECT" * FROM review);
-		$row = mysql_fetch_array($res);
+		$res = mysqli_query("SELECT * FROM review");
+		$row = mysqli_fetch_array($res);
 	}
-
 	if(isset($_GET['newReview'])) {
 		$newReview = $_GET['newReview'];
 		$id = $_GET['Name'];
-
-		$sql = "UPDATE review SET Review=$newReview WHERE Hike_Name=$id";
-		$res = mysql_query($sql) or die("Error: could not update");
+		$sql = "UPDATE review SET Review='$newReview' WHERE Hike_Name='$id'";
+		if ($conn->query($sql)=== TRUE) {
+			echo "record updated successfully";
+		}
+		else {
+			echo "error updating record: " . $conn->error;
+		}
+		$conn->close();
+		//$res = mysqli_query(new PDO($dsn, $username, $password), $sql) or die("Error: could not update");
 	}
-	header("Location: index.html");
-
+	//header("Location: index.html");
 ?>
 
 <!DOCTYPE html>
@@ -58,7 +70,6 @@
 			</div>
 		</div>
 <?php
-
 ?>
 
 	<footer class="primary-footer container">
